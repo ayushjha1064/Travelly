@@ -1,0 +1,95 @@
+
+> travelly@1.0.0 test
+> jest --runInBand
+
+PASS tests/itinerary.integration.test.js
+  ● Console
+
+    console.error
+      AuthMiddleware error: Access denied
+
+      18 |     next();
+      19 |   } catch (error) {
+    > 20 |     console.error("AuthMiddleware error:", error.message);
+         |             ^
+      21 |     return res.status(401).json({
+      22 |       error: error.message === "Access denied" ? "Access denied" : "Invalid token"
+      23 |     });
+
+      at error (middleware/authMiddleware.js:20:13)
+
+    console.error
+      AuthMiddleware error: Access denied
+
+      18 |     next();
+      19 |   } catch (error) {
+    > 20 |     console.error("AuthMiddleware error:", error.message);
+         |             ^
+      21 |     return res.status(401).json({
+      22 |       error: error.message === "Access denied" ? "Access denied" : "Invalid token"
+      23 |     });
+
+      at error (middleware/authMiddleware.js:20:13)
+
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/itinerary [32m200[0m 3.107 ms - 28[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [32m200[0m 9.800 ms - 541[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/itinerary [32m200[0m 0.694 ms - 541[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0 [32m200[0m 1.057 ms - 1422[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/members [32m200[0m 0.846 ms - 194[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/expenses [32m200[0m 1.391 ms - 36[0m
+[0mPATCH /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0 [32m200[0m 1.141 ms - 348[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/itinerary [33m401[0m 0.684 ms - 25[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/itinerary [33m404[0m 1.089 ms - 60[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [33m401[0m 0.239 ms - 25[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [33m404[0m 0.631 ms - 60[0m
+[0mPOST /api/groups/bad-id/generate-itinerary [33m400[0m 0.139 ms - 44[0m
+[0mPOST /api/groups/ed9b90e2-98d9-4e6e-ae2c-b9719717ba28/generate-itinerary [33m404[0m 0.518 ms - 60[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [33m400[0m 0.171 ms - 87[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [33m400[0m 0.614 ms - 81[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/itinerary [32m200[0m 0.484 ms - 541[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [31m503[0m 0.612 ms - 122[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [31m502[0m 0.546 ms - 82[0m
+[0mPOST /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/generate-itinerary [31m502[0m 0.588 ms - 73[0m
+[0mGET /api/groups/c85d7a1c-2351-4dcb-b01b-67d9cb77abe0/itinerary [32m200[0m 0.465 ms - 541[0m
+PASS tests/authCache.test.js
+  ● Console
+
+    console.error
+      Firebase verifyIdToken error: Rejected token
+
+      43 |     return decodedToken;
+      44 |   } catch (error) {
+    > 45 |     console.error("Firebase verifyIdToken error:", error.message);
+         |             ^
+      46 |     throw error;
+      47 |   }
+      48 | }
+
+      at error (services/authService.js:45:13)
+      at resolveAuthenticatedUser (services/authService.js:85:24)
+      at Object.<anonymous> (tests/authCache.test.js:13:3)
+
+    console.error
+      Firebase verifyIdToken error: Expired token
+
+      43 |     return decodedToken;
+      44 |   } catch (error) {
+    > 45 |     console.error("Firebase verifyIdToken error:", error.message);
+         |             ^
+      46 |     throw error;
+      47 |   }
+      48 | }
+
+      at error (services/authService.js:45:13)
+      at resolveAuthenticatedUser (services/authService.js:85:24)
+      at Object.<anonymous> (tests/authCache.test.js:22:3)
+
+PASS tests/expenseSplit.test.js
+PASS tests/memberInviteService.test.js
+PASS tests/itinerary.test.js
+
+Test Suites: 5 passed, 5 total
+Tests:       56 passed, 56 total
+Snapshots:   0 total
+Time:        0.634 s, estimated 1 s
+Ran all test suites.

@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "firebase": "real ID token verified by Travelly",
+  "gemini": "live API",
+  "database": "PostgreSQL JSONB verified",
+  "httpGenerationStatus": 200,
+  "httpReloadStatus": 200,
+  "days": 2,
+  "activities": 10,
+  "estimatedTotalCost": 5400,
+  "emailPasswordEnabled": true,
+  "localhostAuthorized": true,
+  "disposableFixturesCleaned": true
+}

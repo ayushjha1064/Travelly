@@ -1,0 +1,80 @@
+{
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-12-10",
+      "activities": [
+        {
+          "time": "09:00",
+          "title": "Breakfast at local cafe",
+          "description": "Enjoy a traditional Goan breakfast of poee and local tea near the coast.",
+          "estimatedCost": 300
+        },
+        {
+          "time": "11:00",
+          "title": "Relax at Baga Beach",
+          "description": "Stroll along the sandy shore and unwind under a beach umbrella at a relaxed pace.",
+          "estimatedCost": 0
+        },
+        {
+          "time": "13:30",
+          "title": "Seafood lunch",
+          "description": "Savor authentic Goan fish curry and rice at a beachside shack.",
+          "estimatedCost": 800
+        },
+        {
+          "time": "16:30",
+          "title": "Sunset view at Anjuna Beach",
+          "description": "Watch the sunset over the Arabian Sea with a refreshing coconut water.",
+          "estimatedCost": 100
+        },
+        {
+          "time": "20:00",
+          "title": "Dinner at local restaurant",
+          "description": "Try authentic bebinca and Goan prawn balchao for dinner.",
+          "estimatedCost": 1000
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-12-11",
+      "activities": [
+        {
+          "time": "09:30",
+          "title": "Morning coffee and pastry",
+          "description": "Start the day slowly with local coffee and a bakery snack.",
+          "estimatedCost": 250
+        },
+        {
+          "time": "11:00",
+          "title": "Calangute Beach Walk",
+          "description": "Enjoy a peaceful morning walk along the coastline collecting shells.",
+          "estimatedCost": 0
+        },
+        {
+          "time": "13:00",
+          "title": "Local spice-infused lunch",
+          "description": "Relish a traditional Goan thali featuring local vegetarian and non-vegetarian delicacies.",
+          "estimatedCost": 750
+        },
+        {
+          "time": "16:00",
+          "title": "Souvenir shopping",
+          "description": "Browse local markets for spices, cashews, and handmade crafts.",
+          "estimatedCost": 1000
+        },
+        {
+          "time": "19:30",
+          "title": "Farewell dinner",
+          "description": "Dine at a cozy coastal eatery enjoying the relaxed evening atmosphere.",
+          "estimatedCost": 1200
+        }
+      ]
+    }
+  ],
+  "summary": "A relaxing 2-day beach and local food getaway in Goa.",
+  "currency": "INR",
+  "destination": "Goa, India",
+  "estimatedTotalCost": 5400
+}

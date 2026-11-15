@@ -1,0 +1,31 @@
+00:00 +0: loading /Users/ayushjha/Downloads/Travelly/frontend/test/widget_test.dart
+00:00 +0: /Users/ayushjha/Downloads/Travelly/frontend/test/itinerary_test.dart: generation uses authenticated API client and displays structured days
+API REQUEST: GET http://localhost:5001/api/groups/trip-id/itinerary
+API RESPONSE STATUS: 200
+API RESPONSE BODY: {"success":true,"data":null}
+00:00 +1: /Users/ayushjha/Downloads/Travelly/frontend/test/itinerary_test.dart: generation uses authenticated API client and displays structured days
+API REQUEST: POST http://localhost:5001/api/groups/trip-id/generate-itinerary
+API REQUEST BODY: {"budget":1000.0,"interests":"Beaches"}
+API RESPONSE STATUS: 200
+API RESPONSE BODY: {"success":true,"data":{"version":1,"generatedAt":"2026-10-07T00:00:00.000Z","stale":false,"preferences":{"budget":1000,"interests":"Beaches"},"itinerary":{"destination":"Goa","currency":"INR","summary":"A relaxed day in Goa","estimatedTotalCost":200,"days":[{"day":1,"date":"2026-12-10","activities":[{"time":"09:00","title":"Beach walk","description":"Enjoy the coast.","estimatedCost":200}]}]}}}
+00:00 +2: /Users/ayushjha/Downloads/Travelly/frontend/test/itinerary_test.dart: missing key error is visible and retry succeeds
+API REQUEST: GET http://localhost:5001/api/groups/trip-id/itinerary
+API RESPONSE STATUS: 200
+API RESPONSE BODY: {"success":true,"data":null}
+API REQUEST: POST http://localhost:5001/api/groups/trip-id/generate-itinerary
+API REQUEST BODY: {"budget":null,"interests":""}
+API RESPONSE STATUS: 503
+API RESPONSE BODY: {"error":"AI itinerary generation is not configured."}
+API REQUEST: POST http://localhost:5001/api/groups/trip-id/generate-itinerary
+API REQUEST BODY: {"budget":null,"interests":""}
+API RESPONSE STATUS: 200
+API RESPONSE BODY: {"success":true,"data":{"version":1,"generatedAt":"2026-10-07T00:00:00.000Z","stale":false,"preferences":{"budget":1000,"interests":"Beaches"},"itinerary":{"destination":"Goa","currency":"INR","summary":"A relaxed day in Goa","estimatedTotalCost":200,"days":[{"day":1,"date":"2026-12-10","activities":[{"time":"09:00","title":"Beach walk","description":"Enjoy the coast.","estimatedCost":200}]}]}}}
+00:00 +3: /Users/ayushjha/Downloads/Travelly/frontend/test/itinerary_test.dart: saved plan reloads, restores preferences and shows stale warning
+API REQUEST: GET http://localhost:5001/api/groups/trip-id/itinerary
+API RESPONSE STATUS: 200
+API RESPONSE BODY: {"success":true,"data":{"version":1,"generatedAt":"2026-10-07T00:00:00.000Z","stale":true,"preferences":{"budget":1000,"interests":"Beaches"},"itinerary":{"destination":"Goa","currency":"INR","summary":"A relaxed day in Goa","estimatedTotalCost":200,"days":[{"day":1,"date":"2026-12-10","activities":[{"time":"09:00","title":"Beach walk","description":"Enjoy the coast.","estimatedCost":200}]}]}}}
+00:00 +4: /Users/ayushjha/Downloads/Travelly/frontend/test/itinerary_test.dart: invalid budget prevents generation
+API REQUEST: GET http://localhost:5001/api/groups/trip-id/itinerary
+API RESPONSE STATUS: 200
+API RESPONSE BODY: {"success":true,"data":null}
+00:00 +5: All tests passed!

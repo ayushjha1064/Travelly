@@ -1,0 +1,25 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+*firebase-adminsdk*.json
+*service-account*.json
+*service_account*.json
+*.pem
+*.p12
+*.key
+
+# Dependencies and generated artifacts
+node_modules/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+backend/uploads/
+
+# Keep the recorded verification evidence
+!documents/verification/*.log
